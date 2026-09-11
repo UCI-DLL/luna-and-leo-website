@@ -12,15 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let index = 0;
 
-    // How many slides fit per "page" at this screen size, but never more
-    // than the number of slides that actually exist (so 2 photos on a
-    // 3-up desktop layout fill the space instead of leaving a gap).
+    // Always show exactly one slide at a time -- people click/arrow
+    // through to see the next one, rather than seeing several at once.
     function itemsPerView() {
-      const w = window.innerWidth;
-      let n = 3;
-      if (w <= 900) n = 2;
-      if (w <= 600) n = 1;
-      return Math.min(n, slides.length);
+      return 1;
     }
 
     function maxIndex() {
