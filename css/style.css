@@ -80,7 +80,25 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .brand img{width:34px; height:auto;}
 .navlinks{display:flex; align-items:center; gap:26px; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.95rem;}
 .navlinks a{color:var(--ink); text-decoration:none;}
-.navlinks a:hover{color:var(--accent);}
+.navlinks a:not(.pilot-btn){
+  position:relative;
+  padding:8px 6px;
+  border-radius:6px;
+  transition:background-color .2s ease;
+}
+.navlinks a:not(.pilot-btn)::after{
+  content:"";
+  position:absolute; left:6px; right:6px; bottom:1px;
+  height:2px; background:var(--accent-deep);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .2s ease;
+}
+.navlinks a:not(.pilot-btn):hover{
+  background:rgba(0,34,68,0.08);
+}
+.navlinks a:not(.pilot-btn):hover::after{
+  transform:scaleX(1);
+}
 .navlinks .pilot-btn{background:var(--accent); color:#fff; padding:9px 20px; border-radius:10px; transition:background-color .2s ease;}
 .navlinks .pilot-btn:hover{background:var(--accent-deep); color:#fff;}
 
