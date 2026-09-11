@@ -11,7 +11,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand"><img src="assets/images/butterfly.jpg" alt="">Luna &amp; Leo</div>
+    <div class="brand"><img src="assets/images/logo.jpg" alt="">Luna &amp; Leo</div>
     <div class="navlinks">
       <a href="#people">People</a>
       <a href="#pilot" class="pilot-btn">Pilot with us</a>
@@ -24,24 +24,44 @@
   <div class="wrap" style="max-width:960px;">
     <div class="masthead-title">
       <h1>The Science Adventures of Luna and Leo</h1>
+      <img src="assets/images/butterfly.jpg" alt="An illustrated monarch butterfly">
     </div>
     <div class="tagline">Bilingual AI storybooks for young scientists</div>
 
-    <div class="hero-scene">
-      <video
-        controls
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        aria-label="A short video of Luna and Leo exploring science together">
-        <source src="assets/video/luna-and-leo-hero.mp4" type="video/mp4">
-        Your browser doesn't support embedded video.
-      </video>
-    </div>
-    <div class="hero-caption">
-      <span>Luna and Leo, exploring the world together</span>
-      <span>Illustrated storybook scene</span>
+    <div class="hero-carousel" id="hero-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <video
+            controls
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="A short video of Luna and Leo exploring science together">
+            <source src="assets/video/luna-and-leo-hero.mp4" type="video/mp4">
+            Your browser doesn't support embedded video.
+          </video>
+          <div class="carousel-caption">
+            <span>Luna and Leo, exploring the world together</span>
+            <span>Hero video</span>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/images/luna-and-leo-standing-by-a-lake-with-a-monarch.jpg" alt="Luna and Leo standing by a lake with a monarch butterfly nearby">
+          <div class="carousel-caption">
+            <span>Luna and Leo, exploring the world together</span>
+            <span>Illustrated storybook scene</span>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="carousel-btn prev" aria-label="Previous slide">&lsaquo;</button>
+      <button type="button" class="carousel-btn next" aria-label="Next slide">&rsaquo;</button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Hero slides">
+        <button type="button" class="carousel-dot active" aria-label="Show slide 1" aria-selected="true"></button>
+        <button type="button" class="carousel-dot" aria-label="Show slide 2" aria-selected="false"></button>
+      </div>
     </div>
 
     <div class="hero-copy">
@@ -166,5 +186,6 @@
   </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
