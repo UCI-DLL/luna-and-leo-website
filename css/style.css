@@ -254,6 +254,21 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .wl-card .num{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
 .wl-card h3{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.28rem; color:var(--ink); margin:0 0 14px; line-height:1.28;}
 .wl-card p{color:#55636e; font-size:0.94rem; margin:0; max-width:none;}
+.wl-collapse{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+.wl-card.expanded .wl-collapse{
+  max-height:400px;
+}
+.wl-toggle{
+  display:inline-block; margin-top:14px;
+  font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.85rem;
+  color:var(--accent); background:none; border:none; cursor:pointer; padding:0;
+  text-decoration:underline;
+}
+.wl-toggle:hover{color:var(--accent-deep);}
 
 /* ---------- STANDARDS / ACCESS ---------- */
 .standards .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}

@@ -74,4 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
     goTo(0);
   }
 
+
+  /* ---------- Expandable "For School / For Home" cards ---------- */
+  document.querySelectorAll('.wl-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.wl-card');
+      const isExpanded = card.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded', String(isExpanded));
+      btn.textContent = isExpanded ? 'Show less' : 'Read more';
+    });
+  });
+
 });
