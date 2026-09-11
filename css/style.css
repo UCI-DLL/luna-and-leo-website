@@ -8,10 +8,7 @@
   --ink: #002244;
   --muted: #55636e;
   --blue: #255799;
-  --blue-light: #4d9fe0;
   --blue-deep: #002244;
-  --green: #3f9c35;
-  --green-deep: #2b6b25;
   --accent: #255799;
   --accent-deep: #002244;
   --gold: #fecc07;
@@ -90,13 +87,13 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .navlinks a:not(.pilot-btn)::after{
   content:"";
   position:absolute; left:6px; right:6px; bottom:1px;
-  height:2px; background:linear-gradient(to right, var(--gold), var(--green));
+  height:2px; background:linear-gradient(to right, #ffffff, var(--gold));
   transform:scaleX(0); transform-origin:left;
   transition:transform .2s ease;
 }
 .navlinks a:not(.pilot-btn):hover{
   background:rgba(0,34,68,0.06);
-  color:var(--blue-light);
+  color:var(--accent);
 }
 .navlinks a:not(.pilot-btn):hover::after{
   transform:scaleX(1);
@@ -192,7 +189,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .problem h2{font-size:clamp(1.6rem,3vw,2.1rem); margin-bottom:18px;}
 .problem-card{
   background:#fff; border-radius:18px; padding:32px;
-  border-left:5px solid var(--green); box-shadow:0 10px 26px rgba(56,53,47,0.06);
+  border-left:5px solid var(--accent); box-shadow:0 10px 26px rgba(56,53,47,0.06);
 }
 .problem-card h3{font-size:1.15rem; margin-bottom:10px; color:var(--blue-deep);}
 .problem-card p{margin:0;}
@@ -221,7 +218,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.68rem; padding:3px 8px; border-radius:5px;
 }
 .progress{height:4px; background:var(--line); border-radius:3px; margin-top:8px; overflow:hidden;}
-.progress span{display:block; height:100%; background:var(--green);}
+.progress span{display:block; height:100%; background:var(--accent);}
 .lib-title{font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.98rem; margin-top:12px; text-align:center;}
 .lib-title .es{display:block; font-weight:500; color:var(--muted); font-size:0.85rem; margin-top:2px;}
 
@@ -262,7 +259,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .standards .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
 @media(max-width:860px){ .standards .wrap{grid-template-columns:1fr;} }
 .badge-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:22px;}
-.badge{font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.88rem; color:var(--blue-deep); border:1.5px solid var(--green); border-radius:999px; padding:8px 16px;}
+.badge{font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.88rem; color:var(--blue-deep); border:1.5px solid var(--gold); border-radius:999px; padding:8px 16px;}
 .access-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:22px;}
 .access-list li{display:flex; gap:16px; align-items:flex-start;}
 .access-list .ic{
