@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = btn.closest('.wl-card');
       const isExpanded = card.classList.toggle('expanded');
       btn.setAttribute('aria-expanded', String(isExpanded));
-      btn.textContent = isExpanded ? 'Show less' : 'Read more';
+      btn.setAttribute('aria-label', isExpanded ? 'Show less' : 'Show more');
     });
   });
 

@@ -248,8 +248,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .wl-eyebrow{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:#8fb3d9; margin-bottom:20px;}
 .wl-headline{font-family:'Montserrat',sans-serif; font-weight:800; font-size:clamp(2rem,4vw,2.7rem); line-height:1.16; color:#fff; margin:0 0 24px;}
 .wl-copy{color:#b9cee2; font-size:1.02rem; max-width:48ch; margin:0;}
-.wl-cards{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
-@media(max-width:640px){ .wl-cards{grid-template-columns:1fr;} }
+.wl-cards{display:grid; grid-template-columns:1fr; gap:22px;}
 .wl-card{background:#fff; border-top:5px solid var(--gold); padding:30px 26px;}
 .wl-card .num{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
 .wl-card h3{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.28rem; color:var(--ink); margin:0 0 14px; line-height:1.28;}
@@ -263,12 +262,28 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   max-height:400px;
 }
 .wl-toggle{
-  display:inline-block; margin-top:14px;
-  font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.85rem;
-  color:var(--accent); background:none; border:none; cursor:pointer; padding:0;
-  text-decoration:underline;
+  display:flex; align-items:center; justify-content:center;
+  width:34px; height:34px; margin-top:16px;
+  border-radius:50%; border:1.5px solid var(--accent); background:#fff;
+  position:relative; cursor:pointer; padding:0;
+  transition:background-color .2s ease;
 }
-.wl-toggle:hover{color:var(--accent-deep);}
+.wl-toggle:hover{background:var(--sky);}
+.wl-toggle:focus-visible{outline:3px solid var(--blue); outline-offset:3px;}
+.wl-toggle::before, .wl-toggle::after{
+  content:""; position:absolute; background:var(--accent);
+  transition:transform .25s ease, opacity .25s ease;
+}
+.wl-toggle::before{ /* horizontal bar, always visible */
+  left:9px; right:9px; top:50%; height:2px; transform:translateY(-50%);
+}
+.wl-toggle::after{ /* vertical bar, hidden when expanded to leave a minus sign */
+  top:9px; bottom:9px; left:50%; width:2px; transform:translateX(-50%);
+}
+.wl-card.expanded .wl-toggle::after{
+  transform:translateX(-50%) scaleY(0);
+  opacity:0;
+}
 
 /* ---------- STANDARDS / ACCESS ---------- */
 .standards .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
