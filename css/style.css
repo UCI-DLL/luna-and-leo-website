@@ -90,7 +90,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .navlinks a:not(.pilot-btn)::after{
   content:"";
   position:absolute; left:6px; right:6px; bottom:1px;
-  height:2px; background:linear-gradient(to right, var(--blue-light), var(--green));
+  height:2px; background:linear-gradient(to right, var(--gold), var(--green));
   transform:scaleX(0); transform-origin:left;
   transition:transform .2s ease;
 }
