@@ -8,9 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
     const prevBtn = carousel.querySelector('.carousel-btn.prev');
     const nextBtn = carousel.querySelector('.carousel-btn.next');
+    const GAP = 18; // must match the gap value in .carousel-track CSS
 
     let index = 0;
 
+    // How many slides fit per "page" at this screen size, but never more
+    // than the number of slides that actually exist (so 2 photos on a
+    // 3-up desktop layout fill the space instead of leaving a gap).
     function itemsPerView() {
       const w = window.innerWidth;
       let n = 3;
@@ -23,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return Math.max(0, slides.length - itemsPerView());
     }
 
+    function applySlideWidths() {
+      const n = itemsPerView();
+      // each slide's width so that `n` of them + (n-1) gaps fill 100%
+      const basis = `calc((100% - ${(n - 1) * GAP}px) / ${n})`;
+      slides.forEach(slide => { slide.style.flexBasis = basis; });
+    }
+
     function pauseOtherVideos(activeIndex) {
       slides.forEach((slide, i) => {
         const video = slide.querySelector('video');
@@ -31,15 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateButtons() {
-      const atMax = index >= maxIndex();
-      if (nextBtn) nextBtn.style.visibility = (maxIndex() === 0 || atMax) ? 'hidden' : 'visible';
-      if (prevBtn) prevBtn.style.visibility = (index === 0) ? 'hidden' : 'visible';
+      const noScrollNeeded = maxIndex() === 0;
+      if (nextBtn) nextBtn.style.visibility = (noScrollNeeded || index >= maxIndex()) ? 'hidden' : 'visible';
+      if (prevBtn) prevBtn.style.visibility = (noScrollNeeded || index === 0) ? 'hidden' : 'visible';
     }
 
     function goTo(i) {
+      applySlideWidths();
       index = Math.max(0, Math.min(i, maxIndex()));
-      const step = 100 / itemsPerView();
-      track.style.transform = `translateX(-${index * step}%)`;
+      const n = itemsPerView();
+      const slideWidthPercent = 100 / n;
+      // account for the gap when translating, same logic as the width calc
+      track.style.transform = `translateX(calc(-${index} * (${slideWidthPercent}% + ${GAP / n}px)))`;
       dots.forEach((dot, i2) => {
         const isActive = i2 === index;
         dot.classList.toggle('active', isActive);
@@ -61,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => goTo(index), { passive: true });
 
+    applySlideWidths();
     goTo(0);
   }
 
