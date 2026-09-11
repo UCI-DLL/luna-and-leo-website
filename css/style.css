@@ -152,13 +152,14 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .hero-copy p{margin:0 auto; font-size:1.08rem;}
 .hero-ctas{display:flex; gap:16px; justify-content:center; margin-top:30px; flex-wrap:wrap;}
 .btn-primary, .btn-secondary{
-  font-family:'Montserrat',sans-serif; font-weight:600; font-size:1rem; padding:13px 28px; border-radius:999px;
+  font-family:'Montserrat',sans-serif; font-weight:600; font-size:1rem; padding:13px 28px; border-radius:10px;
   text-decoration:none; display:inline-block; border:none; cursor:pointer;
+  transition:background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 .btn-primary{background:var(--accent); color:#fff;}
 .btn-primary:hover{background:var(--accent-deep);}
 .btn-secondary{border:1.5px solid var(--line); color:var(--ink); background:#fff;}
-.btn-secondary:hover{border-color:var(--accent); color:var(--accent);}
+.btn-secondary:hover{border-color:var(--accent-deep); color:var(--accent-deep); background:var(--sky);}
 
 /* ---------- SECTION HEADERS ---------- */
 .section-head{max-width:58ch; margin:0 auto 52px; text-align:center;}
