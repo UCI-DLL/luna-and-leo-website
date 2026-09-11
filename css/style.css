@@ -81,7 +81,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .navlinks{display:flex; align-items:center; gap:26px; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.95rem;}
 .navlinks a{color:var(--ink); text-decoration:none;}
 .navlinks a:hover{color:var(--accent);}
-.navlinks .pilot-btn{background:var(--accent); color:#fff; padding:9px 20px; border-radius:999px;}
+.navlinks .pilot-btn{background:var(--accent); color:#fff; padding:9px 20px; border-radius:10px; transition:background-color .2s ease;}
 .navlinks .pilot-btn:hover{background:var(--accent-deep); color:#fff;}
 
 /* mobile nav toggle */
@@ -283,6 +283,10 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .cta h2{color:#eef4fa; font-size:clamp(1.7rem,3.4vw,2.3rem); max-width:44ch; margin:0 auto;}
 .cta p{color:#c9d6e0; margin:18px auto 30px; max-width:52ch;}
 .cta .btn-primary{font-size:1.05rem; padding:15px 32px;}
+/* .cta's background is the same dark navy as --accent-deep, so the normal
+   hover color would make this button disappear. Use gold instead, which
+   already matches the site's nav accent color. */
+.cta .btn-primary:hover{background:var(--gold); color:var(--ink);}
 
 footer{background:var(--ink); color:#9fb0bc; font-size:0.85rem; text-align:center; padding:36px 0 40px;}
 footer a{color:#c9d6e0;}
