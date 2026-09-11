@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- Hero carousel ---------- */
+  /* ---------- Hero carousel (shows multiple slides at once) ---------- */
   const carousel = document.getElementById('hero-carousel');
   if (carousel) {
     const track = carousel.querySelector('.carousel-track');
@@ -11,6 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let index = 0;
 
+    function itemsPerView() {
+      const w = window.innerWidth;
+      let n = 3;
+      if (w <= 900) n = 2;
+      if (w <= 600) n = 1;
+      return Math.min(n, slides.length);
+    }
+
+    function maxIndex() {
+      return Math.max(0, slides.length - itemsPerView());
+    }
+
     function pauseOtherVideos(activeIndex) {
       slides.forEach((slide, i) => {
         const video = slide.querySelector('video');
@@ -18,14 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    function updateButtons() {
+      const atMax = index >= maxIndex();
+      if (nextBtn) nextBtn.style.visibility = (maxIndex() === 0 || atMax) ? 'hidden' : 'visible';
+      if (prevBtn) prevBtn.style.visibility = (index === 0) ? 'hidden' : 'visible';
+    }
+
     function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
+      index = Math.max(0, Math.min(i, maxIndex()));
+      const step = 100 / itemsPerView();
+      track.style.transform = `translateX(-${index * step}%)`;
       dots.forEach((dot, i2) => {
-        dot.classList.toggle('active', i2 === index);
-        dot.setAttribute('aria-selected', String(i2 === index));
+        const isActive = i2 === index;
+        dot.classList.toggle('active', isActive);
+        dot.setAttribute('aria-selected', String(isActive));
       });
       pauseOtherVideos(index);
+      updateButtons();
     }
 
     if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
@@ -37,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowLeft') goTo(index - 1);
       if (e.key === 'ArrowRight') goTo(index + 1);
     });
+
+    window.addEventListener('resize', () => goTo(index), { passive: true });
 
     goTo(0);
   }

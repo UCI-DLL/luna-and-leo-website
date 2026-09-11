@@ -29,33 +29,28 @@
     <div class="tagline">Bilingual AI storybooks for young scientists</div>
 
     <div class="hero-carousel" id="hero-carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <video
-            controls
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            aria-label="A short video of Luna and Leo exploring science together">
-            <source src="assets/video/luna-and-leo-hero.mp4" type="video/mp4">
-            Your browser doesn't support embedded video.
-          </video>
-          <div class="carousel-caption">
-            <span>Luna and Leo, exploring the world together</span>
-            <span>Hero video</span>
+      <button type="button" class="carousel-btn prev" aria-label="Previous slide">&lsaquo;</button>
+
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <video
+              controls
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="A short video of Luna and Leo exploring science together">
+              <source src="assets/video/luna-and-leo-hero.mp4" type="video/mp4">
+              Your browser doesn't support embedded video.
+            </video>
           </div>
-        </div>
-        <div class="carousel-slide">
-          <img src="assets/images/luna-and-leo-standing-by-a-lake-with-a-monarch.jpg" alt="Luna and Leo standing by a lake with a monarch butterfly nearby">
-          <div class="carousel-caption">
-            <span>Luna and Leo, exploring the world together</span>
-            <span>Illustrated storybook scene</span>
+          <div class="carousel-slide">
+            <img src="assets/images/luna-and-leo-standing-by-a-lake-with-a-monarch.jpg" alt="Luna and Leo standing by a lake with a monarch butterfly nearby">
           </div>
         </div>
       </div>
 
-      <button type="button" class="carousel-btn prev" aria-label="Previous slide">&lsaquo;</button>
       <button type="button" class="carousel-btn next" aria-label="Next slide">&rsaquo;</button>
 
       <div class="carousel-dots" role="tablist" aria-label="Hero slides">
