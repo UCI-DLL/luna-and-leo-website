@@ -8,6 +8,7 @@
   --ink: #002244;
   --muted: #55636e;
   --blue: #255799;
+  --blue-light: #4d9fe0;
   --blue-deep: #002244;
   --green: #3f9c35;
   --green-deep: #2b6b25;
@@ -89,12 +90,13 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .navlinks a:not(.pilot-btn)::after{
   content:"";
   position:absolute; left:6px; right:6px; bottom:1px;
-  height:2px; background:var(--accent-deep);
+  height:2px; background:linear-gradient(to right, var(--blue-light), var(--gold));
   transform:scaleX(0); transform-origin:left;
   transition:transform .2s ease;
 }
 .navlinks a:not(.pilot-btn):hover{
-  background:rgba(0,34,68,0.08);
+  background:rgba(0,34,68,0.06);
+  color:var(--blue-light);
 }
 .navlinks a:not(.pilot-btn):hover::after{
   transform:scaleX(1);
