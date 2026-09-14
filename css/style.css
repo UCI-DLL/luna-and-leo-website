@@ -178,6 +178,36 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .btn-secondary{border:1.5px solid var(--line); color:var(--ink); background:#fff;}
 .btn-secondary:hover{border-color:var(--accent-deep); color:var(--accent-deep); background:var(--sky); transform:translateY(-2px);}
 
+/* ---------- ABOUT PLATFORM PAGE ---------- */
+.about-intro .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:start; text-align:left;}
+@media(max-width:860px){ .about-intro .wrap{grid-template-columns:1fr;} }
+.about-eyebrow{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
+.about-intro h1{font-size:clamp(1.9rem,4vw,2.6rem); margin-bottom:16px;}
+.about-intro .tagline-lead{font-family:'Montserrat',sans-serif; font-weight:600; color:var(--muted); font-size:1.05rem;}
+.about-card{background:#fff; border-radius:16px; padding:30px; box-shadow:0 10px 26px rgba(56,53,47,0.06);}
+.about-card p{margin:0 0 1em 0;}
+.about-card p:last-child{margin-bottom:0;}
+
+.feature-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media(max-width:860px){ .feature-grid{grid-template-columns:1fr;} }
+.feature-card{background:#fff; border-top:5px solid var(--accent); padding:28px 24px; box-shadow:0 8px 20px rgba(0,34,68,0.06); transition:transform .2s ease;}
+.feature-card:hover{transform:translateY(-3px);}
+.feature-card h3{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; color:var(--ink); margin:0 0 12px; line-height:1.28;}
+.feature-card p{color:var(--muted); font-size:0.94rem; margin:0; max-width:none;}
+
+.preview-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+@media(max-width:700px){ .preview-grid{grid-template-columns:1fr;} }
+.preview-card{background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 8px 20px rgba(0,34,68,0.06);}
+.preview-card img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block;}
+.preview-card-caption{padding:16px 18px;}
+.preview-card-caption .lang-tag{
+  display:inline-block; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.72rem;
+  letter-spacing:0.08em; text-transform:uppercase; color:var(--accent);
+  background:var(--sky); border-radius:999px; padding:4px 12px; margin-bottom:8px;
+}
+.preview-card-caption p{margin:0; color:var(--muted); font-size:0.92rem;}
+.preview-note{max-width:60ch; margin:0 auto 32px; text-align:center; color:var(--muted); font-size:0.95rem;}
+
 /* ---------- PLACEHOLDER PAGE HERO (About Platform / Research / People) ---------- */
 .page-hero{
   text-align:center; padding:80px 0 60px;
@@ -245,34 +275,37 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .wl-card .num{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
 .wl-card h3{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.28rem; color:var(--ink); margin:0 0 14px; line-height:1.28;}
 .wl-card p{color:#55636e; font-size:0.94rem; margin:0; max-width:none;}
-.wl-collapse{
+/* Reusable expand/collapse pattern (plus/minus toggle) -- works on any
+   card: give the card class="expandable", wrap the extra text in
+   .expand-collapse, and add an .expand-toggle button after it. */
+.expand-collapse{
   max-height:0;
   overflow:hidden;
   transition:max-height .35s ease;
 }
-.wl-card.expanded .wl-collapse{
-  max-height:400px;
+.expandable.expanded .expand-collapse{
+  max-height:600px;
 }
-.wl-toggle{
+.expand-toggle{
   display:flex; align-items:center; justify-content:center;
   width:34px; height:34px; margin-top:16px;
   border-radius:50%; border:1.5px solid var(--accent); background:#fff;
   position:relative; cursor:pointer; padding:0;
   transition:background-color .2s ease;
 }
-.wl-toggle:hover{background:var(--sky);}
-.wl-toggle:focus-visible{outline:3px solid var(--blue); outline-offset:3px;}
-.wl-toggle::before, .wl-toggle::after{
+.expand-toggle:hover{background:var(--sky);}
+.expand-toggle:focus-visible{outline:3px solid var(--blue); outline-offset:3px;}
+.expand-toggle::before, .expand-toggle::after{
   content:""; position:absolute; background:var(--accent);
   transition:transform .25s ease, opacity .25s ease;
 }
-.wl-toggle::before{ /* horizontal bar, always visible */
+.expand-toggle::before{ /* horizontal bar, always visible */
   left:9px; right:9px; top:50%; height:2px; transform:translateY(-50%);
 }
-.wl-toggle::after{ /* vertical bar, hidden when expanded to leave a minus sign */
+.expand-toggle::after{ /* vertical bar, hidden when expanded to leave a minus sign */
   top:9px; bottom:9px; left:50%; width:2px; transform:translateX(-50%);
 }
-.wl-card.expanded .wl-toggle::after{
+.expandable.expanded .expand-toggle::after{
   transform:translateX(-50%) scaleY(0);
   opacity:0;
 }
