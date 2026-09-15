@@ -239,6 +239,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .preview-card-caption{padding:16px 18px;}
 .preview-card-caption p{margin:0; color:var(--muted); font-size:0.92rem;}
 .preview-note{max-width:60ch; margin:0 auto 32px; text-align:center; color:var(--muted); font-size:0.95rem;}
+.text-accent-bold{font-family:'Montserrat',sans-serif; font-weight:700; color:var(--accent);}
 
 /* ---------- PEOPLE PAGE ---------- */
 .leader-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:28px 24px;}
@@ -427,7 +428,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .access-list p{margin:0; font-size:0.98rem;}
 
 /* ---------- COLLABORATION BANNER ---------- */
-.collab{background:var(--cream); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.collab{background:#fff8ef; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
 .collab .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start; text-align:left;}
 @media(max-width:920px){ .collab .wrap{grid-template-columns:1fr;} }
 .collab-eyebrow{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:20px;}
