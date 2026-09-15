@@ -302,12 +302,25 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .person-links svg{width:16px; height:16px;}
 
 /* ---------- PILOT WITH US PAGE ---------- */
+.page-hero--overlap{padding-bottom:90px;}
+
+.floating-contact-card{
+  max-width:520px; margin:-56px auto 0; position:relative; z-index:5;
+  background:#fff; border-radius:16px; padding:20px 26px;
+  box-shadow:0 16px 36px rgba(0,34,68,0.18);
+  display:flex; align-items:center; gap:16px;
+}
+.floating-contact-card-title{font-family:'Montserrat',sans-serif; font-weight:700; color:var(--ink); font-size:0.98rem;}
+.floating-contact-card a{font-size:0.95rem;}
+.cta-icon--inline{width:44px; height:44px; margin-bottom:0; background:var(--sky); color:var(--blue-deep); flex:none;}
+.cta-icon--inline svg{width:22px; height:22px;}
+
 .pilot-intro{text-align:center; padding:44px 0 20px;}
 .pilot-intro .wrap{max-width:700px;}
 .pilot-intro .tagline-lead{font-size:1.1rem;}
 .pilot-intro .preview-note{margin-top:18px;}
 
-.checklist-badges{list-style:none; margin:0 auto; padding:0; display:flex; flex-direction:column; gap:22px; max-width:640px;}
+.checklist-badges{list-style:none; margin:0 auto; padding:0; display:flex; flex-direction:column; gap:16px; max-width:640px;}
 .checklist-badges li{display:flex; gap:16px; align-items:flex-start; text-align:left; color:#3d4a54; font-size:1rem;}
 .checklist-badges .ic{
   width:38px; height:38px; flex:none; border-radius:50%; background:var(--accent);
@@ -315,10 +328,16 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   box-shadow:0 6px 14px rgba(0,34,68,0.15);
 }
 .checklist-badges .ic svg{width:18px; height:18px; color:#fff;}
+.checklist-badges--boxed li{
+  background:var(--cream); border-left:4px solid var(--accent);
+  border-radius:0 10px 10px 0; padding:16px 18px;
+}
 
+.feature-card-head{display:flex; align-items:center; gap:14px; margin-bottom:14px;}
+.feature-card-head h3{margin:0;}
 .feature-card-icon{
   display:flex; align-items:center; justify-content:center;
-  width:44px; height:44px; border-radius:12px; margin-bottom:16px;
+  width:44px; height:44px; border-radius:12px; flex:none;
   background:var(--sky); color:var(--blue-deep);
 }
 .feature-card--gold .feature-card-icon{background:#fff4d6; color:#a5680a;}
@@ -331,6 +350,9 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   margin-bottom:18px;
 }
 .cta-icon svg{width:26px; height:26px;}
+
+.btn-with-icon{display:inline-flex; align-items:center; gap:10px;}
+.btn-with-icon svg{width:18px; height:18px; flex:none;}
 
 /* ---------- PLACEHOLDER PAGE HERO (About Platform / Research / People) ---------- */
 .page-hero{
