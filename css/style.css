@@ -308,6 +308,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .page-hero p{margin:14px auto 0; color:var(--muted); font-size:1.05rem;}
 
 .page-hero--banner{background:var(--blue); padding:56px 0;}
+.people-intro{padding-top:48px;}
 .page-hero--banner h1{color:#fff;}
 
 .title-underline{
