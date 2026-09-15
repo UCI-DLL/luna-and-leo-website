@@ -179,11 +179,15 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .btn-secondary:hover{border-color:var(--accent-deep); color:var(--accent-deep); background:var(--sky); transform:translateY(-2px);}
 
 /* ---------- ABOUT PLATFORM PAGE ---------- */
-.about-intro .wrap{display:flex; flex-direction:column; gap:32px; text-align:left; max-width:800px;}
+.about-intro .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; text-align:left;}
+@media(max-width:860px){ .about-intro .wrap{grid-template-columns:1fr;} }
 .about-eyebrow{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
 .about-intro h1{font-size:clamp(1.9rem,4vw,2.6rem); margin-bottom:16px;}
 .about-intro .tagline-lead{font-family:'Montserrat',sans-serif; font-weight:600; color:var(--muted); font-size:1.05rem;}
-.about-card{background:#fff; border-radius:16px; padding:32px; box-shadow:0 10px 26px rgba(56,53,47,0.06);}
+.about-card{
+  background:#fff; border-radius:16px; padding:32px; box-shadow:0 10px 26px rgba(56,53,47,0.06);
+  display:flex; flex-direction:column; justify-content:center;
+}
 .about-card p{margin:0 0 1em 0;}
 .about-card p:last-child{margin-bottom:0;}
 
