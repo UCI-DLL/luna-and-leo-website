@@ -192,6 +192,8 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   font-family:'Montserrat',sans-serif; font-weight:700; color:var(--ink);
   font-size:1.15rem; line-height:1.5; margin-bottom:16px;
 }
+.about-card .about-quick-facts{margin-top:22px;}
+.about-card-btn{margin-top:24px;}
 .about-card p{margin:0 0 1em 0;}
 .about-card p:last-child{margin-bottom:0;}
 
