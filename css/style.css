@@ -302,12 +302,35 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .person-links svg{width:16px; height:16px;}
 
 /* ---------- PILOT WITH US PAGE ---------- */
-.pilot-intro{text-align:center; padding:70px 0 20px;}
-.pilot-intro .wrap{max-width:760px;}
-.pilot-intro h1{font-size:clamp(1.9rem,4vw,2.6rem); margin-top:14px;}
-.pilot-intro .tagline-lead{margin-top:16px;}
-.pilot-intro .preview-note{margin-top:20px;}
-.pilot-checklist{max-width:640px; margin:0 auto;}
+.pilot-intro{text-align:center; padding:44px 0 20px;}
+.pilot-intro .wrap{max-width:700px;}
+.pilot-intro .tagline-lead{font-size:1.1rem;}
+.pilot-intro .preview-note{margin-top:18px;}
+
+.checklist-badges{list-style:none; margin:0 auto; padding:0; display:flex; flex-direction:column; gap:22px; max-width:640px;}
+.checklist-badges li{display:flex; gap:16px; align-items:flex-start; text-align:left; color:#3d4a54; font-size:1rem;}
+.checklist-badges .ic{
+  width:38px; height:38px; flex:none; border-radius:50%; background:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 14px rgba(0,34,68,0.15);
+}
+.checklist-badges .ic svg{width:18px; height:18px; color:#fff;}
+
+.feature-card-icon{
+  display:flex; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:12px; margin-bottom:16px;
+  background:var(--sky); color:var(--blue-deep);
+}
+.feature-card--gold .feature-card-icon{background:#fff4d6; color:#a5680a;}
+.feature-card-icon svg{width:22px; height:22px;}
+
+.cta-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:50%;
+  background:rgba(255,255,255,0.12); color:#fff;
+  margin-bottom:18px;
+}
+.cta-icon svg{width:26px; height:26px;}
 
 /* ---------- PLACEHOLDER PAGE HERO (About Platform / Research / People) ---------- */
 .page-hero{
