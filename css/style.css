@@ -302,15 +302,18 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .person-links svg{width:16px; height:16px;}
 
 /* ---------- PILOT WITH US PAGE ---------- */
-.page-hero-subtitle{
-  max-width:600px; margin:16px auto 0; color:rgba(255,255,255,0.85);
-  font-size:1.05rem; line-height:1.6;
-}
-
 .pilot-intro{padding:56px 0;}
+.pilot-intro-card{
+  background:#fff; border:1px solid var(--line); border-radius:20px;
+  padding:44px; box-shadow:0 14px 32px rgba(56,53,47,0.08);
+}
+.pilot-intro-lead{
+  font-family:'Montserrat',sans-serif; font-weight:700; color:var(--ink);
+  font-size:1.25rem; line-height:1.5; margin:0;
+}
 .pilot-intro-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
-@media(max-width:820px){ .pilot-intro-grid{grid-template-columns:1fr;} }
-.pilot-intro-image{width:100%; border-radius:16px; box-shadow:0 10px 26px rgba(56,53,47,0.08);}
+@media(max-width:820px){ .pilot-intro-grid{grid-template-columns:1fr;} .pilot-intro-card{padding:28px;} }
+.pilot-intro-image{width:100%; border-radius:14px;}
 .pilot-question-link{
   display:inline-flex; align-items:center; gap:10px; margin-top:22px;
   font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.95rem; color:var(--accent);
@@ -498,6 +501,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 
 /* ---------- CTA ---------- */
 .cta{background:var(--ink); color:#eef4fa; text-align:center;}
+.cta--tight{padding-bottom:28px;}
 .cta h2{color:#eef4fa; font-size:clamp(1.7rem,3.4vw,2.3rem); max-width:44ch; margin:0 auto;}
 .cta p{color:#c9d6e0; margin:18px auto 30px; max-width:52ch;}
 .cta .btn-primary{font-size:1.05rem; padding:15px 32px;}
