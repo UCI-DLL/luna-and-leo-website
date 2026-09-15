@@ -90,11 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const langSwitch = document.querySelector('.lang-switch');
   if (langSwitch) {
     const previewImages = document.querySelectorAll('.preview-lang-img');
+    const previewTexts = document.querySelectorAll('.preview-lang-text');
     langSwitch.addEventListener('click', () => {
       const isSpanish = langSwitch.getAttribute('aria-checked') !== 'true';
       langSwitch.setAttribute('aria-checked', String(isSpanish));
       previewImages.forEach(img => {
         img.src = isSpanish ? img.dataset.es : img.dataset.en;
+      });
+      previewTexts.forEach(p => {
+        p.textContent = isSpanish ? p.dataset.esText : p.dataset.enText;
       });
     });
   }
