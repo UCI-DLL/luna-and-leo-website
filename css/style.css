@@ -301,6 +301,14 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .person-links a:hover{background:var(--accent); color:#fff;}
 .person-links svg{width:16px; height:16px;}
 
+/* ---------- PILOT WITH US PAGE ---------- */
+.pilot-intro{text-align:center; padding:70px 0 20px;}
+.pilot-intro .wrap{max-width:760px;}
+.pilot-intro h1{font-size:clamp(1.9rem,4vw,2.6rem); margin-top:14px;}
+.pilot-intro .tagline-lead{margin-top:16px;}
+.pilot-intro .preview-note{margin-top:20px;}
+.pilot-checklist{max-width:640px; margin:0 auto;}
+
 /* ---------- PLACEHOLDER PAGE HERO (About Platform / Research / People) ---------- */
 .page-hero{
   text-align:center; padding:80px 0 60px;
