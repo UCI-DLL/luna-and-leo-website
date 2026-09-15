@@ -434,7 +434,6 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .collab-headline{font-family:'Montserrat',sans-serif; font-weight:800; font-size:clamp(2rem,4vw,2.6rem); line-height:1.16; color:var(--ink); margin:0 0 22px;}
 .collab-copy{color:var(--muted); font-size:1.02rem; max-width:48ch; margin:0;}
 .org-highlight{font-family:'Montserrat',sans-serif; font-weight:600; color:var(--accent);}
-.title-highlight{font-family:'Montserrat',sans-serif; font-weight:700; color:var(--accent);}
 .collab-cards{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
 @media(max-width:640px){ .collab-cards{grid-template-columns:1fr;} }
 .collab-card{background:#fff; border-top:5px solid var(--accent); padding:30px 26px; box-shadow:0 8px 20px rgba(0,34,68,0.06); transition:transform .2s ease;}
@@ -442,25 +441,6 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .collab-card .num{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
 .collab-card h3{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.24rem; color:var(--ink); margin:0 0 14px; line-height:1.28;}
 .collab-card p{color:var(--muted); font-size:0.94rem; margin:0; max-width:none;}
-
-/* ---------- PEOPLE ---------- */
-.people-group{margin-bottom:44px;}
-.people-group h3{font-family:'Montserrat',sans-serif; font-weight:700; font-size:1.1rem; color:var(--blue-deep); margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid var(--line);}
-.people-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:18px;}
-.person-card{
-  flex:0 1 250px;
-  background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px 20px;
-  box-shadow:0 6px 14px rgba(56,53,47,0.05);
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.person-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 14px 28px rgba(0,34,68,0.14);
-  border-color:var(--accent);
-}
-.person-card .name{font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--ink);}
-.person-card .name a{color:inherit; text-decoration:none; border-bottom:1.5px solid var(--accent);}
-.person-card .aff{font-size:0.9rem; color:var(--muted); margin-top:3px;}
 
 /* ---------- CTA ---------- */
 .cta{background:var(--ink); color:#eef4fa; text-align:center;}
