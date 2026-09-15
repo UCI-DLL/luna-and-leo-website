@@ -302,23 +302,23 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .person-links svg{width:16px; height:16px;}
 
 /* ---------- PILOT WITH US PAGE ---------- */
-.page-hero--overlap{padding-bottom:90px;}
-
-.floating-contact-card{
-  max-width:520px; margin:-56px auto 0; position:relative; z-index:5;
-  background:#fff; border-radius:16px; padding:20px 26px;
-  box-shadow:0 16px 36px rgba(0,34,68,0.18);
-  display:flex; align-items:center; gap:16px;
+.page-hero-subtitle{
+  max-width:600px; margin:16px auto 0; color:rgba(255,255,255,0.85);
+  font-size:1.05rem; line-height:1.6;
 }
-.floating-contact-card-title{font-family:'Montserrat',sans-serif; font-weight:700; color:var(--ink); font-size:0.98rem;}
-.floating-contact-card a{font-size:0.95rem;}
-.cta-icon--inline{width:44px; height:44px; margin-bottom:0; background:var(--sky); color:var(--blue-deep); flex:none;}
-.cta-icon--inline svg{width:22px; height:22px;}
 
-.pilot-intro{text-align:center; padding:44px 0 20px;}
-.pilot-intro .wrap{max-width:700px;}
-.pilot-intro .tagline-lead{font-size:1.1rem;}
-.pilot-intro .preview-note{margin-top:18px;}
+.pilot-intro{padding:56px 0;}
+.pilot-intro-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+@media(max-width:820px){ .pilot-intro-grid{grid-template-columns:1fr;} }
+.pilot-intro-image{width:100%; border-radius:16px; box-shadow:0 10px 26px rgba(56,53,47,0.08);}
+.pilot-question-link{
+  display:inline-flex; align-items:center; gap:10px; margin-top:22px;
+  font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.95rem; color:var(--accent);
+}
+.pilot-question-link svg{width:20px; height:20px; flex:none;}
+.pilot-question-link:hover{color:var(--accent-deep);}
+
+.pilot-checklist-section{padding-top:56px;}
 
 .checklist-badges{list-style:none; margin:0 auto; padding:0; display:flex; flex-direction:column; gap:16px; max-width:640px;}
 .checklist-badges li{display:flex; gap:16px; align-items:flex-start; text-align:left; color:#3d4a54; font-size:1rem;}
