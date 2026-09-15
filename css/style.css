@@ -241,9 +241,9 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .preview-note{max-width:60ch; margin:0 auto 32px; text-align:center; color:var(--muted); font-size:0.95rem;}
 
 /* ---------- PEOPLE PAGE ---------- */
-.leader-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:32px 28px;}
+.leader-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:28px 24px;}
 .leader-card{
-  flex:0 1 240px;
+  flex:0 1 260px;
   display:flex; flex-direction:column; align-items:center; text-align:center;
   background:#fff; border:1px solid var(--line); border-radius:16px; padding:28px 22px;
   box-shadow:0 6px 14px rgba(56,53,47,0.05);
@@ -255,7 +255,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   border-color:var(--accent);
 }
 .leader-photo-ring{
-  width:120px; height:120px; border-radius:50%; padding:4px;
+  width:150px; height:150px; border-radius:50%; padding:4px;
   background:linear-gradient(135deg, #ff9a3d, var(--gold));
   margin-bottom:18px; flex:none;
 }
@@ -266,11 +266,11 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .leader-name{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.2rem; color:var(--ink);}
 .leader-role{font-family:'Open Sans',sans-serif; font-size:0.9rem; color:var(--muted); margin-top:6px; line-height:1.5;}
 
-.member-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:22px 20px;}
+.member-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:24px 20px;}
 .member-card{
-  flex:0 1 180px;
+  flex:0 1 220px;
   display:flex; flex-direction:column; align-items:center; text-align:center;
-  background:#fff; border:1px solid var(--line); border-radius:14px; padding:20px 16px;
+  background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 20px;
   box-shadow:0 6px 14px rgba(56,53,47,0.05);
   transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
@@ -280,16 +280,16 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
   border-color:var(--accent);
 }
 .member-photo-ring{
-  width:76px; height:76px; border-radius:50%; padding:2px;
+  width:120px; height:120px; border-radius:50%; padding:3px;
   background:var(--line);
-  margin-bottom:14px; flex:none;
+  margin-bottom:16px; flex:none;
 }
 .member-photo-ring img{
   width:100%; height:100%; border-radius:50%; object-fit:cover; display:block;
-  border:2px solid #fff;
+  border:3px solid #fff;
 }
-.member-name{font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem; color:var(--ink);}
-.member-role{font-family:'Open Sans',sans-serif; font-size:0.78rem; color:var(--muted); margin-top:4px; line-height:1.4;}
+.member-name{font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.05rem; color:var(--ink);}
+.member-role{font-family:'Open Sans',sans-serif; font-size:0.85rem; color:var(--muted); margin-top:6px; line-height:1.4;}
 
 .person-links{display:flex; gap:8px; margin-top:14px;}
 .person-links a{
@@ -299,8 +299,6 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 }
 .person-links a:hover{background:var(--accent); color:#fff;}
 .person-links svg{width:16px; height:16px;}
-.member-card .person-links a{width:28px; height:28px;}
-.member-card .person-links svg{width:14px; height:14px;}
 
 /* ---------- PLACEHOLDER PAGE HERO (About Platform / Research / People) ---------- */
 .page-hero{
