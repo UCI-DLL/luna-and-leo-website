@@ -302,16 +302,27 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .person-links svg{width:16px; height:16px;}
 
 /* ---------- RESEARCH PAGE ---------- */
-.research-intro{text-align:center; padding:70px 0 20px;}
-.research-intro h1{font-size:clamp(1.9rem,4vw,2.6rem); margin-top:10px;}
-.research-intro-text{max-width:640px; margin:28px auto 0; text-align:left;}
-.research-jumpnav{
-  display:flex; justify-content:center; gap:28px; margin-top:34px;
-  font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.92rem;
-  border-top:1px solid var(--line); padding-top:22px;
+.research-hero{background:var(--ink); text-align:center; padding:80px 0 60px;}
+.research-hero-eyebrow{
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem;
+  letter-spacing:0.14em; text-transform:uppercase; color:var(--gold);
 }
-.research-jumpnav a{color:var(--muted);}
-.research-jumpnav a:hover{color:var(--accent);}
+.research-hero h1{
+  color:#fff; font-size:clamp(2.1rem,4.5vw,3rem); line-height:1.18; margin-top:14px;
+}
+.research-hero-text{max-width:620px; margin:24px auto 0;}
+.research-hero-text p{color:#b9cee2; margin:0;}
+.research-stats{
+  display:flex; justify-content:center; gap:56px; margin-top:48px;
+  flex-wrap:wrap;
+}
+.research-stat-num{
+  font-family:'Montserrat',sans-serif; font-weight:800; font-size:2.4rem; color:#fff;
+}
+.research-stat-label{
+  font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.82rem;
+  letter-spacing:0.06em; text-transform:uppercase; color:#8fb3d9; margin-top:6px;
+}
 
 /* --- Our Approach: alternating editorial rows, not cards --- */
 .research-approach{padding-top:24px;}
