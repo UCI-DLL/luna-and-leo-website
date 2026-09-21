@@ -178,6 +178,26 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .btn-secondary{border:1.5px solid var(--line); color:var(--ink); background:#fff;}
 .btn-secondary:hover{border-color:var(--accent-deep); color:var(--accent-deep); background:var(--sky); transform:translateY(-2px);}
 
+/* ---------- FUNDING SECTION ---------- */
+.funding-section{background:var(--blue); padding:64px 0;}
+.funding-grid{display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center;}
+@media(max-width:700px){ .funding-grid{grid-template-columns:1fr; text-align:center;} }
+.funding-logo{
+  width:110px; height:110px; object-fit:contain; background:#fff;
+  border-radius:16px; padding:16px; justify-self:start;
+}
+@media(max-width:700px){ .funding-logo{justify-self:center;} }
+.funding-eyebrow{
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem;
+  letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;
+}
+.funding-section h2{color:#fff; font-size:clamp(1.6rem,3vw,2.2rem); margin:0 0 10px;}
+.funding-section p{color:#dce9f5; margin:0 0 20px;}
+.funding-buttons{display:flex; gap:14px; flex-wrap:wrap;}
+@media(max-width:700px){ .funding-buttons{justify-content:center;} }
+.funding-btn{background:#fff; color:var(--ink); border:none;}
+.funding-btn:hover{background:var(--sky);}
+
 /* ---------- ABOUT PLATFORM PAGE ---------- */
 .about-intro .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; text-align:left; align-items:start;}
 @media(max-width:860px){ .about-intro .wrap{grid-template-columns:1fr;} }
