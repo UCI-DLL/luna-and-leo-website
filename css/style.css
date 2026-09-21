@@ -427,21 +427,6 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .pilot-question-link svg{width:20px; height:20px; flex:none;}
 .pilot-question-link:hover{color:var(--accent-deep);}
 
-.pilot-checklist-section{padding-top:56px;}
-
-.checklist-badges{list-style:none; margin:0 auto; padding:0; display:flex; flex-direction:column; gap:16px; max-width:640px;}
-.checklist-badges li{display:flex; gap:16px; align-items:flex-start; text-align:left; color:#3d4a54; font-size:1rem;}
-.checklist-badges .ic{
-  width:38px; height:38px; flex:none; border-radius:50%; background:var(--accent);
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 6px 14px rgba(0,34,68,0.15);
-}
-.checklist-badges .ic svg{width:18px; height:18px; color:#fff;}
-.checklist-badges--boxed li{
-  background:var(--cream); border-left:4px solid var(--accent);
-  border-radius:0 10px 10px 0; padding:16px 18px;
-}
-
 .feature-card-head{display:flex; align-items:center; gap:14px; margin-bottom:14px;}
 .feature-card-head h3{margin:0;}
 .feature-card-icon{
@@ -451,17 +436,6 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 }
 .feature-card--gold .feature-card-icon{background:#fff4d6; color:#a5680a;}
 .feature-card-icon svg{width:22px; height:22px;}
-
-.cta-icon{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:56px; height:56px; border-radius:50%;
-  background:rgba(255,255,255,0.12); color:#fff;
-  margin-bottom:18px;
-}
-.cta-icon svg{width:26px; height:26px;}
-
-.btn-with-icon{display:inline-flex; align-items:center; gap:10px;}
-.btn-with-icon svg{width:18px; height:18px; flex:none;}
 
 /* ---------- PLACEHOLDER PAGE HERO (About Platform / Research / People) ---------- */
 .page-hero{
