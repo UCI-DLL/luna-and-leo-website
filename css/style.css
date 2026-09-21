@@ -408,7 +408,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; paddi
 .pub-citation a{color:var(--accent); word-break:break-word;}
 
 /* ---------- PILOT WITH US PAGE ---------- */
-.pilot-intro{padding:56px 0;}
+.pilot-intro{padding:90px 0 110px;}
 .pilot-intro-card{
   background:#fff; border:1px solid var(--line); border-radius:20px;
   padding:44px; box-shadow:0 14px 32px rgba(56,53,47,0.08);
